@@ -5,11 +5,14 @@ A utility class to read and write XML in Apex using <b>XmlStreamWriter</b> and <
 
 #### Deserializes the XML string/content into an Apex object
 
+```
 XMLWrapper xmlWrapper = new XMLWrapper();
 XMLUtility.serialize(xmlWrapper);
+```
 
 Returns:
 
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <soapenv:Envelope>
    <soapenv:Body>
@@ -30,13 +33,16 @@ Returns:
      </info:Request>
    </soapenv:Body>
 </soapenv:Envelope>
+```
 
-
+```
 XMLWrapper xmlWrapper = new XMLWrapper();
 XMLUtility.serialize2(xmlWrapper);
+```
 
 Returns:
 
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:info="https://xml2apex.herokuapp.com">
    <soapenv:Body>
@@ -57,7 +63,7 @@ Returns:
      </info:Request>
    </soapenv:Body>
 </soapenv:Envelope>
-
+```
 
 #### Serializes Apex objects into XML string/content
 
@@ -67,6 +73,7 @@ XMLWrapper xmlWrapper2 = XMLUtility.deserialize(xmlString);
 
 Retunrs:
 
+```
 XMLWrapper:[
 	firstName=Marc,
 	lastName=Benioff,
@@ -78,4 +85,4 @@ XMLWrapper:[
 	postalCode=CA 94105,
 	street=The Landmark @ One Market, Suite 300
 ]
-
+```
