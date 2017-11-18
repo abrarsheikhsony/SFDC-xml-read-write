@@ -3,7 +3,7 @@ A utility class to read and write XML in Apex using <a href="https://developer.s
 
 #### Serializes Apex objects into XML string/content
 
-(1) To serialize the Apex object, call the XMLUtility.serialize(XMLWrapper xmlWrapper) method by passing XMLWrapper object.
+(1) To serialize the Apex object, call the ```XMLUtility.serialize(XMLWrapper xmlWrapper)``` method by passing XMLWrapper object.
 
 ```
 XMLWrapper xmlWrapper = new XMLWrapper();
@@ -35,7 +35,7 @@ Returns:
 </soapenv:Envelope>
 ```
 
-(2) To serialize the Apex object, call the XMLUtility.serialize2(XMLWrapper xmlWrapper) method by passing XMLWrapper object.
+(2) To serialize the Apex object, call the ```XMLUtility.serialize2(XMLWrapper xmlWrapper)``` method by passing XMLWrapper object.
 
 ```
 XMLWrapper xmlWrapper = new XMLWrapper();
@@ -69,7 +69,7 @@ Returns:
 
 #### Deserializes the XML string/content into an Apex object
 
-(1) To deserialize the XML string, call the XMLUtility.deserialize(String xmlString) method by passing XML string.
+(1) To deserialize the XML string, call the ```XMLUtility.deserialize(String xmlString)``` method by passing XML string.
 
 ```
 XMLWrapper xmlWrapper = new XMLWrapper();
