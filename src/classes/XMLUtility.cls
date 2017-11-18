@@ -3,15 +3,6 @@ Name: 		XMLUtility.cls
 Purpose: 	An XML utility for:
 (1) Deserializes the XML string/content into an Apex object.
 (2) Serializes Apex objects into XML string/content.
-
-// How to Test
-XMLWrapper xmlWrapper = new XMLWrapper();
-XMLUtility.serialize(xmlWrapper);
-
-XMLWrapper xmlWrapper = new XMLWrapper();
-String xmlString = XMLUtility.serialize2(xmlWrapper);
-XMLWrapper xmlWrapper2 = XMLUtility.deserialize(xmlString);
-
 ------------------------------History----------------------------------
 Version 	Author 		Date 					Detail Description 
 -------		-------		-------------- 			------------------
@@ -21,13 +12,6 @@ public with sharing class XMLUtility{
 
     /*----------------------------------------------------------------------
     Purpose:    Deserializes the XML string/content into an Apex object
-    ----------------------------------------------------------------------
-	In the XML tag "<soapenv:Envelope>", if there will not be any namespace "info" bound to element prefix soapenv then you will get an exception says:
-	"System.XmlException: Failed to parse XML due to: could not determine namespace bound to element prefix soapenv (position: START_DOCUMENT seen <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope>... @1:56)"
-	For example:
-	This will work = <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:info="https://xml2apex.herokuapp.com">
-	This will NOT = <soapenv:Envelope>
-    ----------------------------------------------------------------------
     Parameters: 
     Returns:    
     ------------------------------History----------------------------------
