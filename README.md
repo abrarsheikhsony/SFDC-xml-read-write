@@ -77,7 +77,7 @@ String xmlString = XMLUtility.serialize2(xmlWrapper);
 XMLWrapper xmlWrapper2 = XMLUtility.deserialize(xmlString);
 ```
 
-Retunrs:
+Returns:
 
 ```
 XMLWrapper:[
