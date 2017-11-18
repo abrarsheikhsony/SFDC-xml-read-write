@@ -1,9 +1,9 @@
 # Reading and Writing XML in Apex
-A utility class to read and write XML in Apex using <b>XmlStreamWriter</b> and <b>Document</b> Apex classes.
+A utility class to read and write XML in Apex using <a href="https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_xml_XmlStream_writer.htm" target="_blank" alt="XmlStreamWriter">XmlStreamWriter</a> and <a href="https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_xml_dom_document.htm" target="_blank" alt="Document">Document</a> Apex classes.
 
-# Usage
+#### Serializes Apex objects into XML string/content
 
-#### Deserializes the XML string/content into an Apex object
+(1) To serialize the Apex object, call the XMLUtility.serialize(XMLWrapper xmlWrapper) method by passing XMLWrapper object.
 
 ```
 XMLWrapper xmlWrapper = new XMLWrapper();
@@ -35,6 +35,8 @@ Returns:
 </soapenv:Envelope>
 ```
 
+(2) To serialize the Apex object, call the XMLUtility.serialize2(XMLWrapper xmlWrapper) method by passing XMLWrapper object.
+
 ```
 XMLWrapper xmlWrapper = new XMLWrapper();
 XMLUtility.serialize2(xmlWrapper);
@@ -65,11 +67,15 @@ Returns:
 </soapenv:Envelope>
 ```
 
-#### Serializes Apex objects into XML string/content
+#### Deserializes the XML string/content into an Apex object
 
+(1) To deserialize the XML string, call the XMLUtility.deserialize(String xmlString) method by passing XML string.
+
+```
 XMLWrapper xmlWrapper = new XMLWrapper();
 String xmlString = XMLUtility.serialize2(xmlWrapper);
 XMLWrapper xmlWrapper2 = XMLUtility.deserialize(xmlString);
+```
 
 Retunrs:
 
