@@ -92,3 +92,14 @@ XMLWrapper:[
 	street=The Landmark @ One Market, Suite 300
 ]
 ```
+
+<b>Note:</b>
+In the XML tag "<soapenv:Envelope>", if it will not have any namespace "info" bound to element prefix soapenv then you will get an exception says:
+
+"System.XmlException: Failed to parse XML due to: could not determine namespace bound to element prefix soapenv (position: START_DOCUMENT seen <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope>... @1:56)"
+
+For example:
+This will work
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:info="https://xml2apex.herokuapp.com">
+
+This will NOT = <soapenv:Envelope>
